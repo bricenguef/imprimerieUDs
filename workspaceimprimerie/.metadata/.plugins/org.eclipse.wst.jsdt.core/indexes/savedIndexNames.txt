@@ -1,0 +1,7 @@
+INDEX VERSION 1.122+/home/nguefack/Bureau/workspace/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+4118695369.index
+752676740.index
+1287215589.index
+3623361905.index
+566991079.index
+3872511569.index

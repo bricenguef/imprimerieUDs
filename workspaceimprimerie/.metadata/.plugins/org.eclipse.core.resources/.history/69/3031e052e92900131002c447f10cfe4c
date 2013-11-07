@@ -1,0 +1,73 @@
+package imprimerieDAO;
+import java.util.List;
+import javax.ejb.Stateless;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+
+import jpa.Compte;
+import jpa.Personnel;
+import jpa.Tache;
+import jpa.Temporaire;
+import jpa.Vague;
+
+@Stateless
+public class ImprimerieStateless implements GestionContactRemote{
+
+
+
+	   @PersistenceContext
+	   EntityManager em;
+
+	   public void ajouterPersonnel(Personnel personnel){
+	      em.persist(personnel);
+	   }
+
+	   public Personnel rechercherPersonnel(String id) {
+	      return em.find(Personnel.class, id);
+	   }
+
+	   public List<Personnel> listerGroupe() {
+	      return em.createQuery("SELECT p FROM Produit p ORDER BY p.Id").getResultList();
+	   }
+
+	@Override
+	public void ajouterTache(Tache tache) {
+		em.persist(tache);
+		
+	}
+
+	
+
+	@Override
+	public void ajouterCompte(Compte compte) {
+		
+		em.persist(compte);
+	}
+
+	@Override
+	public void ajouterTemporaire(Temporaire temporaire) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void ajouterVague(Vague vague) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	}
+
+
+
+
+
+//public void ajouterPersonnel(Personnel personnel);
+//public Personnel rechercherPersonnel(String id);
+//public List<Personnel> listerGroupe();
+
+//public void ajouterTache(Tache tache);
+
+
+//public Personnel rechercherTache(String id);
+//public void ajouterCompte(Compte compte);

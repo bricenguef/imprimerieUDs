@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;entity&apos; to &apos;jpa&apos;&#x0A;- Original project: &apos;classeurEJB&apos;&#x0A;- Original element: &apos;classeurEJB/ejbModule/entity&apos;&#x0A;- Renamed element: &apos;classeurEJB/ejbModule/jpa&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;entity&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/ejbModule&lt;entity" name="jpa" qualified="false" references="true" stamp="1381401766807" textual="false" version="1.0"/>
+</session>

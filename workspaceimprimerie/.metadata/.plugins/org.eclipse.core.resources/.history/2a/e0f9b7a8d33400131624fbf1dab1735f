@@ -1,0 +1,64 @@
+package jpa;
+
+import java.util.List;
+
+import javax.persistence.Id;
+
+public class Etagere {
+	@Id
+   
+    private Integer idetagere;
+    
+    private String nometagere;
+   
+    private List<Document> documentList;
+  
+    private Classeur idclasseur;
+
+    public Etagere() {
+    }
+
+    public Etagere(Integer idetagere) {
+        this.idetagere = idetagere;
+    }
+
+    public Etagere(Integer idetagere, String nometagere) {
+        this.idetagere = idetagere;
+        this.nometagere = nometagere;
+    }
+
+	public Integer getIdetagere() {
+		return idetagere;
+	}
+
+	public void setIdetagere(Integer idetagere) {
+		this.idetagere = idetagere;
+	}
+
+	public String getNometagere() {
+		return nometagere;
+	}
+
+	public void setNometagere(String nometagere) {
+		this.nometagere = nometagere;
+	}
+
+	public List<Document> getDocumentList() {
+		return documentList;
+	}
+
+	public void setDocumentList(List<Document> documentList) {
+		this.documentList = documentList;
+	}
+
+	public Classeur getIdclasseur() {
+		return idclasseur;
+	}
+
+	public void setIdclasseur(Classeur idclasseur) {
+		this.idclasseur = idclasseur;
+	}
+
+    
+    
+}

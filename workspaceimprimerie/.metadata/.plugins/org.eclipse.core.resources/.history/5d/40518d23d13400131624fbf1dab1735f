@@ -1,0 +1,37 @@
+package jpa;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+
+import java.util.List;
+
+
+@Entity
+public class Personnel {
+	private static final long serialVersionUID = 1L;
+    @Id
+    private Integer idpersonnel;
+    private String nompersonnel;
+    private String prenompersonnel;
+    private String grade;
+    private int code;
+    @ManyToMany(mappedBy = "personnelList")
+    private List<Classeur> classeurList;
+
+    public Personnel() {
+    }
+
+    public Personnel(Integer idpersonnel) {
+        this.idpersonnel = idpersonnel;
+    }
+
+    public Personnel(Integer idpersonnel, String nompersonnel, String prenompersonnel, String grade, int code) {
+        this.idpersonnel = idpersonnel;
+        this.nompersonnel = nompersonnel;
+        this.prenompersonnel = prenompersonnel;
+        this.grade = grade;
+        this.code = code;
+    }
+
+}

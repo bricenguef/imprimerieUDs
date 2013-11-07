@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="planets">
+        <item>NÉTOYAGE</item>
+        <item>TECHNICIENT</item>
+        <item>IMPRIMERIE</item>
+        <item>ADMINISTRATEUR</item>
+        <item>COUTIER</item>
+        <item>f</item>
+        <item>g</item>
+        <item>h</item>
+    </string-array>
+    
+    
+</resources>

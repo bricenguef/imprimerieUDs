@@ -1,0 +1,28 @@
+package jpa;
+
+import javax.persistence.Entity;
+
+@Entity
+public class Classeur {
+	int idclasseur;
+	String libelle;
+	public Classeur() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public int getIdclasseur() {
+		return idclasseur;
+	}
+	public void setIdclasseur(int idclasseur) {
+		this.idclasseur = idclasseur;
+	}
+	public String getLibelle() {
+		return libelle;
+	}
+	public void setLibelle(String libelle) {
+		this.libelle = libelle;
+	}
+	
+	
+
+}

@@ -1,0 +1,42 @@
+package jpa;
+
+import java.io.Serializable;
+
+import javax.persistence.Id;
+
+
+@Id
+public class Document implements Serializable{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
+	@Id
+    private Integer iddocument;
+    private String nomdocument;
+    private String anneecreation;
+    private String moiscreation;
+    private String annee;
+    private String typedocument;
+    private Etagere idetagere;
+
+    public Document() {
+    }
+
+    public Document(Integer iddocument) {
+        this.iddocument = iddocument;
+    }
+
+    public Document(Integer iddocument, String nomdocument, String anneecreation, String moiscreation, String annee, String typedocument) {
+        this.iddocument = iddocument;
+        this.nomdocument = nomdocument;
+        this.anneecreation = anneecreation;
+        this.moiscreation = moiscreation;
+        this.annee = annee;
+        this.typedocument = typedocument;
+    }
+
+
+}

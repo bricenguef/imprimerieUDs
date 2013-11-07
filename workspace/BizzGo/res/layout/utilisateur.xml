@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     android:background="@drawable/fondbizzgo"
+    android:orientation="vertical" >
+     <LinearLayout
+       
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="             ENREGISTREMENT UTILISATEUR:     "
+            android:textColor="#0000FF"
+            android:textStyle="bold" />
+         </LinearLayout>
+
+    <LinearLayout
+      
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="NOM                "
+            android:textColor="#0000FF"
+            android:textStyle="bold" />
+        <EditText
+            android:id="@+id/nom"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:hint="nom"
+            android:inputType="text" />
+    </LinearLayout>
+    <LinearLayout
+      
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="LOGIN               "
+            android:textColor="#0000FF"
+            android:textStyle="bold" />
+        <EditText
+            android:id="@+id/login"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:hint="login"
+            android:inputType="text" />
+    </LinearLayout>
+    
+    <LinearLayout
+      
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="MOT DE PASSE"
+            android:textColor="#0000FF"
+            android:textStyle="bold" />
+        <EditText
+            android:id="@+id/pass"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:hint="pass"
+            android:inputType="textPassword" />
+    </LinearLayout>
+    <LinearLayout
+      
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="TÂCHE   ."
+            android:textColor="#0000FF"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/pays"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_weight="5"
+            android:hint="tâche"
+            android:inputType="text" />
+
+    </LinearLayout>
+    <LinearLayout
+       
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="VAGUE"
+            android:textColor="#0000FF"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/ville"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_weight="5"
+            android:hint="vague"
+            android:inputType="text" />
+
+    </LinearLayout>
+    <LinearLayout
+      
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="FACULTE"
+            android:textColor="#0000FF"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/quartier"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_weight="5"
+            android:hint="faculte"
+            android:inputType="text" />
+
+    </LinearLayout>
+    <LinearLayout
+       
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="FILIERE"
+            android:textColor="#0000FF"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/adresse"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_weight="5"
+            android:hint="filiere"
+            android:inputType="text" />
+
+    </LinearLayout>
+    <LinearLayout
+     
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/ajouter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_weight="1"
+            android:text="AJOUTER" />
+
+        <Button
+            android:id="@+id/retour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_weight="1"
+            android:text="Retour" />
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Resultat:" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="fill_parent"
+        android:layout_height="998dp"
+        android:text="Entrer les differents champs et cliquer sur Afficher pour enregistrer les differents Produits" />
+   
+    
+
+</LinearLayout>

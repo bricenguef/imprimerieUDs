@@ -1,0 +1,77 @@
+
+
+import imprimerieDAO.GestionContactRemote;
+import imprimerieDAO.ImprimerieStateless;
+
+import java.io.IOException;
+import java.util.Properties;
+
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import jpa.Tache;
+//@WebServlet("/free")
+public class index extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+	String pageRetour = "/WEB-INF/index.jsp";
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public index() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		
+		String op = req.getParameter("operation");
+		String num = req.getParameter("num");
+		String val = req.getParameter("val");
+
+		
+		Properties ppt = null;
+		Context ctx = null;
+		ImprimerieStateless ref = null;
+		GestionContactRemote home = null;
+		
+      try {
+    	  ppt = new Properties();
+			ppt.put(Context.INITIAL_CONTEXT_FACTORY,
+					"org.jnp.interfaces.NamingContextFactory");
+			ppt.put(Context.PROVIDER_URL, "localhost:1099");
+			ctx = new InitialContext(ppt);
+			home = (GestionContactRemote) ctx.lookup("ImprimerieStateless/remote-Client");
+			
+
+         // Ne pas faire l'ajout plusieurs fois, commenter ces lignes après la première exécution.
+         Tache t= new Tache();
+         t.setLibele("agrapher les cahiers");
+         t.setEtat("actif");
+         home.ajouterTache(t);
+
+         this.getServletContext().getRequestDispatcher(pageRetour)
+			.forward(request, response);
+
+      } catch (Exception e) {
+         e.printStackTrace();
+      }
+   }
+	
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+	}
+
+}

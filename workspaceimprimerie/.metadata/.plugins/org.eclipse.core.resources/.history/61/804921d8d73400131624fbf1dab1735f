@@ -1,0 +1,105 @@
+package jpa;
+
+import java.io.Serializable;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+
+@Entity
+public class Document implements Serializable{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
+	@Id
+    private Integer iddocument;
+    private String nomdocument;
+    private String anneecreation;
+    private String moiscreation;
+    private String annee;
+    private String typedocument;
+    private Etagere idetagere;
+
+    public Document() {
+    }
+
+    public Document(Integer iddocument) {
+        this.iddocument = iddocument;
+    }
+
+    public Document(Integer iddocument, String nomdocument, String anneecreation, String moiscreation, String annee, String typedocument) {
+        this.iddocument = iddocument;
+        this.nomdocument = nomdocument;
+        this.anneecreation = anneecreation;
+        this.moiscreation = moiscreation;
+        this.annee = annee;
+        this.typedocument = typedocument;
+    }
+
+	public Integer getIddocument() {
+		return iddocument;
+	}
+
+	public void setIddocument(Integer iddocument) {
+		this.iddocument = iddocument;
+	}
+
+	public String getNomdocument() {
+		return nomdocument;
+	}
+
+	public void setNomdocument(String nomdocument) {
+		this.nomdocument = nomdocument;
+	}
+
+	public String getAnneecreation() {
+		return anneecreation;
+	}
+
+	public void setAnneecreation(String anneecreation) {
+		this.anneecreation = anneecreation;
+	}
+
+	public String getMoiscreation() {
+		return moiscreation;
+	}
+
+	public void setMoiscreation(String moiscreation) {
+		this.moiscreation = moiscreation;
+	}
+
+	public String getAnnee() {
+		return annee;
+	}
+
+	public void setAnnee(String annee) {
+		this.annee = annee;
+	}
+
+	public String getTypedocument() {
+		return typedocument;
+	}
+
+	public void setTypedocument(String typedocument) {
+		this.typedocument = typedocument;
+	}
+
+	public Etagere getIdetagere() {
+		return idetagere;
+	}
+
+	public void setIdetagere(Etagere idetagere) {
+		this.idetagere = idetagere;
+	}
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+
+
+    
+    
+}

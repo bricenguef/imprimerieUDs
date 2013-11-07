@@ -1,0 +1,13 @@
+INDEX VERSION 1.126
+/home/nguefack/workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/3405564184.index
+/Test
+/home/nguefack/workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/1987951371.index
+/classeurEJB
+/home/nguefack/workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/3703194086.index
+/Test
+/home/nguefack/workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/1346254719.index
+/imprimerieDWP
+/home/nguefack/workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/471932456.index
+/imprimerieDWP
+/home/nguefack/workspace/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/1948278510.index
+/Test

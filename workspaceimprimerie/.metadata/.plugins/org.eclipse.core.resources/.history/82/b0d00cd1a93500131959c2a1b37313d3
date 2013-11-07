@@ -1,0 +1,42 @@
+package classeurDAO;
+
+import java.util.List;
+
+import javax.ejb.Remote;
+
+import jpa.Classeur;
+import jpa.Document;
+import jpa.Etagere;
+import jpa.Personnel;
+
+
+
+@Remote
+public interface InterfaceClasseur {
+	//methodes sur le classeur
+	public Boolean ajouterClasseur(Classeur classeur);
+	//public boolean supprimerClasseur(int id);
+	//public boolean modifierClasseur(int id,String nom);
+	
+	//methodes de l'etagere
+	 public void ajouterEtagere(Etagere etagere);
+	 //public boolean supprimerEtagere(int id);
+	 //public boolean modifierEtagere(int id,String nom);
+	 
+	 //methodes des documents
+	 public void ajouterDocument(Document document);
+	 //public boolean supprimerDocument(int id);
+	 //public boolean modifierDocument(int id,String nom);
+	 //public Document rechercherDocument(int id,String nom);
+	 //public Document rechercherDocument(int id);
+	 //public Document rechercherDocument(String nom);
+	 //public List<Document> listerDocumentAnnee(String annee);
+	 //public List<Document> listerDocumentMois(String mois);
+	 //public List<Document> listerDocumentJour(String jour);
+	 
+	 
+	 //methodes de personnel
+	 
+	 public Boolean ajouterPersonnel(Personnel classeur);
+	//public boolean identifierPersonnel(int code);
+}

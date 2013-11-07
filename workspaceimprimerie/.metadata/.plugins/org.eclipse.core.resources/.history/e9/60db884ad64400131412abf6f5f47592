@@ -1,0 +1,103 @@
+package imprimerieDAO;
+import java.util.List;
+import javax.ejb.Stateless;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+
+import jpa.Affecter;
+import jpa.Compte;
+import jpa.Personnel;
+import jpa.Tache;
+import jpa.Temporaire;
+import jpa.Vague;
+@Stateless(name = "Client", mappedName = "ImprimerieStateless/remote-Client")
+public class ImprimerieStateless implements GestionContactRemote{
+
+
+
+	   @PersistenceContext
+	   EntityManager em;
+
+	   public void ajouterPersonnel(Personnel personnel){
+	      em.persist(personnel);
+	   }
+
+	   public Personnel rechercherPersonnel(String id) {
+	      return em.find(Personnel.class, id);
+	   }
+
+	   public List<Personnel> listerGroupe() {
+	      return em.createQuery("SELECT p FROM Produit p ORDER BY p.Id").getResultList();
+	   }
+
+	@Override
+	public void ajouterTache(Tache tache) {
+		try{
+			em.persist(tache);
+			System.out.println("enregistrement de tache :try");
+		
+		}catch(Exception e){
+			System.out.println("enregistrement de tache    "+e.getMessage());
+			
+		}
+		
+	}
+
+	
+
+	@Override
+	public void ajouterCompte(Compte compte) {
+		
+		em.persist(compte);
+	}
+	@Override
+	public boolean modifiaffecter() {
+		// TODO Auto-generated method stub
+		
+		return false;
+	}
+
+	@Override
+	public void ajouterTemporaire(Temporaire temporaire) {
+		
+		em.persist(temporaire);
+	}
+
+	@Override
+	public void ajouterVague(Vague vague) {
+		em.persist(vague);
+		
+	}
+	
+	//@Override
+	public int listindx() {
+		// TODO Auto-generated method stub
+		int id=-1;
+		List<Personnel> liste=em.createQuery("SELECT p FROM Personnel p ORDER BY p.idpersonne").getResultList();
+		id=liste.get(liste.size()-1).getIdpersonne();
+		return id;
+	}
+	
+	@Override
+	public boolean ajouteraffecter(Affecter affect) {
+		// TODO Auto-generated method stub
+		em.persist(affect);
+		return true;
+	}
+	
+
+	}
+
+
+
+
+
+//public void ajouterPersonnel(Personnel personnel);
+//public Personnel rechercherPersonnel(String id);
+//public List<Personnel> listerGroupe();
+
+//public void ajouterTache(Tache tache);
+
+
+//public Personnel rechercherTache(String id);
+//public void ajouterCompte(Compte compte);

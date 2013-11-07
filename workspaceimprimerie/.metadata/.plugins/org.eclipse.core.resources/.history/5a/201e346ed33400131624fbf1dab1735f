@@ -1,0 +1,52 @@
+package jpa;
+
+import java.io.Serializable;
+import java.util.List;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
+
+
+
+@Entity
+public class Classeur implements Serializable{
+	int idclasseur;
+	String libelle;
+	
+	@ManyToMany
+    private List<Personnel> personnelList;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idclasseur")
+    private List<Etagere> etagereList;
+	
+	
+	public Classeur() {
+    }
+
+    public Classeur(Integer idclasseur) {
+        this.idclasseur = idclasseur;
+    }
+
+    public Classeur(Integer idclasseur, String libelle) {
+        this.idclasseur = idclasseur;
+        this.libelle = libelle;
+    }
+	
+    
+	public int getIdclasseur() {
+		return idclasseur;
+	}
+	public void setIdclasseur(int idclasseur) {
+		this.idclasseur = idclasseur;
+	}
+	public String getLibelle() {
+		return libelle;
+	}
+	public void setLibelle(String libelle) {
+		this.libelle = libelle;
+	}
+	
+	
+
+}

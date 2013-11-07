@@ -1,0 +1,34 @@
+package classeurDAO;
+
+import javax.ejb.Stateless;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+
+import jpa.Classeur;
+
+@Stateless
+public class ServeurClasseur implements InterfaceClasseur{
+	
+	@PersistenceContext
+	   EntityManager em;
+	
+	
+	//fonctions du classeur
+	public Boolean ajouterClasseur(Classeur classeur) {
+	      em.persist(classeur);
+	      return true;
+	   }
+	
+	//fonction de l'etagere 
+	public Boolean ajouterEtagere(Etagere etagere){
+	      em.persist(etagere);
+	      return true;
+	   }
+	   
+	 //fonctions du personnel
+	public Boolean ajouterPersonnel(Personnel personnel){
+	      em.persist(personnel);
+	      return true;
+       }
+	
+}

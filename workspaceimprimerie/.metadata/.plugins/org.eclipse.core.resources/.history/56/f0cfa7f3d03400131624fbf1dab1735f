@@ -1,0 +1,37 @@
+package jpa;
+
+public class Personnel {
+	private static final long serialVersionUID = 1L;
+    @Id
+    @Basic(optional = false)
+    private Integer idpersonnel;
+    @Basic(optional = false)
+    @Column(name = "nompersonnel")
+    private String nompersonnel;
+    @Basic(optional = false)
+    @Column(name = "prenompersonnel")
+    private String prenompersonnel;
+    @Basic(optional = false)
+    @Column(name = "grade")
+    private String grade;
+    @Column(name = "code")
+    private int code;
+    @ManyToMany(mappedBy = "personnelList")
+    private List<Classeur> classeurList;
+
+    public Personnel() {
+    }
+
+    public Personnel(Integer idpersonnel) {
+        this.idpersonnel = idpersonnel;
+    }
+
+    public Personnel(Integer idpersonnel, String nompersonnel, String prenompersonnel, String grade, int code) {
+        this.idpersonnel = idpersonnel;
+        this.nompersonnel = nompersonnel;
+        this.prenompersonnel = prenompersonnel;
+        this.grade = grade;
+        this.code = code;
+    }
+
+}

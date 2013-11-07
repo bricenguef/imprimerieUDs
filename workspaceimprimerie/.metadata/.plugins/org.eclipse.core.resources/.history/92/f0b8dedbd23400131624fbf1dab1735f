@@ -1,0 +1,28 @@
+package jpa;
+
+import java.util.List;
+
+public class Etagere {
+	@Id
+   
+    private Integer idetagere;
+    
+    private String nometagere;
+   
+    private List<Document> documentList;
+  
+    private Classeur idclasseur;
+
+    public Etagere() {
+    }
+
+    public Etagere(Integer idetagere) {
+        this.idetagere = idetagere;
+    }
+
+    public Etagere(Integer idetagere, String nometagere) {
+        this.idetagere = idetagere;
+        this.nometagere = nometagere;
+    }
+
+}
